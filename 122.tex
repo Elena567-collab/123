@@ -1,0 +1,233 @@
+% !TeX program = xelatex
+% !TeX encoding = UTF-8
+\documentclass[a4paper,12pt]{article}
+
+% ===== ПАКЕТЫ =====
+\usepackage{geometry}
+\geometry{left=2.5cm, right=2cm, top=2cm, bottom=2cm}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{amsmath}
+\usepackage{caption}
+\usepackage{setspace}
+\usepackage{xcolor}
+\usepackage[table]{xcolor}
+\usepackage{float} % для [H] размещения
+
+% ===== ЯЗЫК И ШРИФТЫ =====
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setmainlanguage{russian}
+\setotherlanguage{english}
+\usepackage{fontspec}
+\setmainfont{Source Serif Pro}
+
+% ===== ЦВЕТА =====
+\definecolor{headerblue}{RGB}{62, 146, 199}
+\definecolor{lightblue}{RGB}{222, 234, 246}
+\definecolor{orange}{RGB}{255, 165, 0}
+
+% ===== НАСТРОЙКИ =====
+\onehalfspacing
+\sloppy
+\emergencystretch=3em
+
+% Настройки разрывов
+\raggedbottom
+\widowpenalty=10000
+\clubpenalty=10000
+\interlinepenalty=100
+\brokenpenalty=10000
+
+% ===== ПРОСТЫЕ КОМАНДЫ БЕЗ \leaders =====
+\newcommand{\simpleheader}[2]{%
+	\noindent%
+	\colorbox{#1}{%
+		\parbox{\dimexpr\textwidth-2\fboxsep}{%
+			\centering\color{white}\textbf{#2}%
+		}%
+	}%
+	\par\vspace{10pt}%
+}
+
+% ===== НАЧАЛО ДОКУМЕНТА =====
+\begin{document}
+	
+	% ========== ПЕРВЫЙ ОТБОРОЧНЫЙ ЭТАП ==========
+	\begin{center}
+		{\Large\bfseries ПЕРВЫЙ ОТБОРОЧНЫЙ ЭТАП}
+		
+		\vspace{10pt}
+		
+		{\large\bfseries ПРЕДМЕТНЫЙ ТУР}
+	\end{center}
+	
+	\vspace{20pt}
+	
+	% ========== ХИМИЯ ==========
+	\noindent{\fontsize{14}{16.8}\selectfont\bfseries Химия}\par\vspace{10pt}
+	
+	% ЗАГОЛОВОК С СИНИМ ФОНОМ И БЕЛЫМ ТЕКСТОМ
+	\noindent
+	\colorbox{headerblue}{%
+		\parbox{\dimexpr\textwidth-2\fboxsep}{%
+			\vspace{4pt}%
+			\centering\color{white}\large\textbf{Задача 1 \hfill 30 баллов}%
+			\vspace{4pt}%
+		}%
+	}
+	
+	% ТЕМА С ГОЛУБЫМ ФОНОМ
+	\noindent
+	\colorbox{lightblue}{%
+		\parbox{\dimexpr\textwidth-2\fboxsep}{%
+			\vspace{5pt}%
+			{\color{black}\small\textit Тема: сплавы в современном мире.}}%
+			\vspace{5pt}%
+		}%
+	}
+% УСЛОВИЕ В ТАБЛИЦЕ - ИСПРАВЛЕННЫЙ СИНТАКСИС
+\noindent    
+\colorbox{orange}{\strut\centering\color{white} Условие}%
+{\leaders\color{orange}\hrule\hfill}% Линия-заполнитель
+\kern0pt
+\vspace{5pt}
+	
+	В современном мире технологии и инженерии сплавы металлов играют важнейшую роль. Эти материалы сочетают свойства различных металлов, создавая уникальные характеристики, которые невозможно достичь с помощью чистых металлов. Сплавы металлов -- это не просто комбинации элементов, а инновационные решения для множества проблем, стоящих перед инженерами и учеными. Использование сплавов дает возможность создавать материалы с уникальным набором физико-химических характеристик, чтобы оптимизировать производственные процессы и повысить эффективность изделий. Это причина того, почему они так широко распространены в самых разнообразных областях: от строительства до высоких технологий.
+	
+	Силумин (сплав на основе алюминия и кремния) представляет собой важный материал, сочетающий в себе прочность, устойчивость и легкость, что обеспечивает его широкое применение в различных областях промышленности и дизайна. Благодаря прочности, низкому весу, коррозионной стойкости силумин используется в автомобилестроении, авиастроении, кораблестроении, в космической промышленности.
+	
+	% РИСУНОК 1
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\textwidth]{images/image1.jpg} % замените на images/image1.jpg
+		\caption*{Рис. 1}
+	\end{figure}
+	
+	Для анализа образца силумина, содержащего алюминий и кремний, массой 30 г его растворили в 400 г 15\%-ного раствора едкого натра, при этом выделился газ, объемом 38,4 л (н.у.). Определите массовую долю алюминия в сплаве (в процентах). Число округлите до целых.
+	
+	\vspace{10pt}
+	
+	% РЕШЕНИЕ
+	\noindent    
+	\colorbox{black}{\strut\centering\color{white} Решение}%
+{\leaders\color{black}\hrule\hfill}% Линия-заполнитель
+\kern0pt
+	
+	\vspace{10pt}
+	
+	Составим уравнения реакций:
+	{\fontsize{10}{9}\selectfont
+		\begin{align*}
+			&2\text{Al} + 2\text{NaOH} + 6\text{H}_2\text{O} \rightarrow 2\text{Na}[\text{Al(OH)}_4] + 3\text{H}_2\uparrow \\
+			&\text{Si} + 2\text{NaOH} + \text{H}_2\text{O} \rightarrow \text{Na}_2\text{SiO}_3 + 2\text{H}_2\uparrow \\
+			&n(\text{H}_2) = \frac{\scriptstyle 38{,}4\,\text{л}}{\scriptstyle 22{,}4\,\text{л/моль}} = 1{,}714\,\text{моль}\\
+			&\text{Если } n(\text{Al}) = x\,\text{моль},\; n(\text{Si}) = y\,\text{моль}, \text{ тогда:} \\
+			&27x + 28y = 30 \\
+			&1{,}5x + 2y = 1{,}714 \\
+			&x = 1\,\text{моль},\; y = 0{,}107\,\text{моль}\\ 
+			&m(\text{Al}) = n \cdot M = 1 \cdot 27 = 27\,\text{г} \\
+			&\omega(\text{Al}) = \frac{27}{30} = 0{,}9 \text{ или } 90\%
+		\end{align*}
+	}
+	
+	\vspace{10pt}
+	
+	% ОТВЕТ
+	\noindent    
+	\colorbox{headerblue}{\strut\centering\color{white} Ответ}%
+	{\leaders\color{headerblue}\hrule\hfill}% Линия-заполнитель
+	\kern0pt
+	
+	90.
+	\vspace{10pt}
+	
+		
+	% ========== ГЕОГРАФИЯ ==========
+	\noindent{\fontsize{14}{16.8}\selectfont\bfseries География}\par\vspace{10pt}
+	
+	% ЗАГОЛОВОК С СИНИМ ФОНОМ И БЕЛЫМ ТЕКСТОМ
+	\noindent
+	\colorbox{headerblue}{%
+		\parbox{\dimexpr\textwidth-2\fboxsep}{%
+			\vspace{4pt}
+			\centering\color{white}\large\textbf{Задача 1. Дельты рек \hfill 30 баллов}
+			\vspace{4pt}
+		}%
+	}
+	
+	% ТЕМА С ГОЛУБЫМ ФОНОМ - УБРАТЬ ЛИШНЮЮ СКОБКУ
+	\noindent
+	\colorbox{lightblue}{%
+		\parbox{\dimexpr\textwidth-2\fboxsep}{% Убрана лишняя 1 после width-
+			\vspace{5pt}
+			{\color{black}\small\textit Тема: региональные физико‑географические особенности; география гидроэнергетики.}}
+			\vspace{6pt}
+		}%
+	}
+	
+	% УСЛОВИЕ
+	\noindent    
+	\colorbox{orange}{\strut\centering\color{white} Условие}%
+	{\leaders\color{orange}\hrule\hfill} % Линия-заполнитель
+	\kern0pt
+	
+	\vspace{10pt}
+	
+	На космических снимках представлены дельты крупных рек России. Соотнесите фото и названия рек.
+	
+	% ТАБЛИЦА - УПРОЩЕННЫЙ ВАРИАНТ
+	\vspace{10pt}
+	\begin{longtable}{|c|p{0.65\textwidth}|c|}
+			\hline
+			& \centering\textbf{Снимок} & \textbf{Река} \\
+			\hline
+			1 &
+			\centering
+			\includegraphics[width=0.58\linewidth]{images/image2.png} \\
+			\vspace{2pt}
+			\textbf{Рис. 2}
+			\vspace{2pt}
+			& Лена \\
+			\hline
+			2 &
+			\centering
+			\includegraphics[width=0.58\linewidth]{images/image3.png} \\
+			\vspace{2pt}
+			\textbf{Рис. 3}
+			\vspace{2pt}
+			& Волга \\
+			\hline
+			3 &
+			\centering
+			\includegraphics[width=0.58\linewidth]{images/image4.png} \\
+			\vspace{2pt}
+			\textbf{Рис. 4}
+			\vspace{2pt}
+			& Хатанга \\
+			\hline
+			4 &
+			\centering
+			\includegraphics[width=0.5\linewidth]{images/image5.png} \\
+			\vspace{2pt}
+			\textbf{Рис. 5}
+			\vspace{2pt}
+			& Обь \\
+			\hline
+	\end{longtable}
+	
+	\vspace{10pt}
+	
+	% ОТВЕТ
+	\noindent    
+	\colorbox{headerblue}{\strut\centering\color{white} Ответ}%
+	{\leaders\color{headerblue}\hrule\hfill} % Линия-заполнитель
+	\kern0pt
+	
+	\vspace{5pt}
+	
+	Снимок 1 --- Лена; снимок 2 --- Обь; снимок 3 --- Хатанга; снимок 4 --- Волга.
+	
+\end{document}
