@@ -17,12 +17,18 @@
 \usepackage{float} % для [H] размещения
 
 % ===== ЯЗЫК И ШРИФТЫ =====
-\usepackage{fontspec}
 \usepackage{polyglossia}
 \setmainlanguage{russian}
 \setotherlanguage{english}
 \usepackage{fontspec}
-\setmainfont{Source Serif Pro}
+\setmainfont{SourceSerifPro}[
+Path = ./fonts/,
+Extension = .ttf,
+UprightFont = *-Regular,
+BoldFont = *-Bold,
+ItalicFont = *-Italic,
+BoldItalicFont = *-BoldItalic
+]
 
 % ===== ЦВЕТА =====
 \definecolor{headerblue}{RGB}{62, 146, 199}
@@ -84,7 +90,7 @@
 	\colorbox{lightblue}{%
 		\parbox{\dimexpr\textwidth-2\fboxsep}{%
 			\vspace{5pt}%
-			{\color{black}\small\textit Тема: сплавы в современном мире.}}%
+			{\color{black}\small\textit{Tема: сплавы в современном мире.}}%
 			\vspace{5pt}%
 		}%
 	}
@@ -231,3 +237,4 @@
 	Снимок 1 --- Лена; снимок 2 --- Обь; снимок 3 --- Хатанга; снимок 4 --- Волга.
 	
 \end{document}
+
